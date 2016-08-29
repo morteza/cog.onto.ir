@@ -1,5 +1,5 @@
 # Cognitive Science Papers We Like
-Cognitive Science Papers We Like, inspired by *Papers We Love* Projects lists insersting papers and publications in Cognitive Science fields. It is currently available at [cog.onto.ir](http://cog.onto.ir).
+*Cognitive Science Papers We Like* (or just read?), inspired by *Papers We Love<sup>&copy;</sup>* Project, lists intersting papers and publications in Cognitive Science fields. It is currently available at [cog.onto.ir](http://cog.onto.ir).
 
 # License
 
