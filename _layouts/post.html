@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<header class="masthead">
+  <h1 class="masthead-title--small">
+    <a class="return" href="{{ site.baseurl }}/">بازگشت به خانه</a>
+  </h1>
+</header>
+<div class="content post">
+  <h1 class="post-title">{{ page.title_fa }}</h1>
+  <div class="post-date">
+    <!-- <time>{{ page.date | date_to_string }}</time> -->
+    <div class="shamsi date">{{ page.date_fa }}</div>
+  </div>
+  {{ content }}
+</div>
