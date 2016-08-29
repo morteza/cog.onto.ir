@@ -3,7 +3,10 @@ layout: default
 ---
 <header class="masthead">
   <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/">{{ site.title_fa }}</a>
+    <p></p>
     <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <hr />
   </h1>
   <nav class="masthead-nav">
     {% for nav in site.nav %}
@@ -16,6 +19,7 @@ layout: default
   <h2>No post found</h2>
 {% else %}
 {% for post in site.posts %}
+  {% if post.layout == 'post_fa' %}
   <div class="list-item">
     <h2 class="list-post-title">
       <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title_fa }}</a>
@@ -25,6 +29,17 @@ layout: default
       <div class="shamsi date">{{ post.date_fa }}</div>
     </div>
   </div>
+  {% endif %}
+  {% if post.layout == 'post_en' %}
+  <div class="list-item" style="direction:ltr">
+    <h2 class="list-post-title">
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title_fa }}</a>
+    </h2>
+    <div class="list-post-date">
+      <time>{{ post.date | date_to_string }}</time>
+    </div>
+  </div>
+  {% endif %}
 {% endfor %}
 {% endif %}
 </div>

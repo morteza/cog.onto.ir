@@ -259,12 +259,12 @@ tbody tr:nth-child(odd) th {
 
 .container {
   max-width: 960px;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1rem;
   margin-left:  auto;
   margin-right: auto;
 
   @media (min-width: 38rem){
-    padding: 5rem 1rem;
+    padding: 1rem 1rem;
   }
 }
 
@@ -273,7 +273,7 @@ tbody tr:nth-child(odd) th {
   &-title {
     font-weight: 300;
     text-align: center;
-    text-shadow: 1px 1px #828282;
+    text-shadow: 1px 1px #fefefe;
 
     a {
       color: #333;
