@@ -37,6 +37,9 @@ layout: default
     </div>
     <div class="list-post-excerpt">
       {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+      <a href="{{ site.baseurl }}{{ post.url }}" style="float: left">ادامه &larr;</a>
+      {% endif %}
     </div>
   </div>
   {% endif %}
@@ -57,8 +60,13 @@ layout: default
     </div>
     <div class="list-post-excerpt">
       {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+      <a href="{{ site.baseurl }}{{ post.url }}" style="float: right">Continue Reading &rarr;</a>
+      {% endif %}
     </div>
   </div>
+  <br />
+  <hr />
   {% endif %}
 {% endfor %}
 {% endif %}
