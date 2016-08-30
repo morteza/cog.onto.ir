@@ -71,6 +71,14 @@ a.farsi.continue:hover, a.english.continue:hover {
   color: darken($brand-color, 15%);
 }
 
+.masthead .masthead-title a {
+  color: $grey-color-dark;
+}
+
+.masthead .masthead-title a:hover {
+  color: $grey-color;
+}
+
 .return.home {
   color: $grey-color-dark;
 }

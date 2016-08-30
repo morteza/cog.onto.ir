@@ -4,7 +4,7 @@ layout: default
 <header class="masthead">
   <h1 class="masthead-title">
     <a href="{{ site.baseurl }}/">{{ site.title_fa }}</a>
-    <p></p>
+    <div style="height:15px"></div>
     <a href="{{ site.baseurl }}/">{{ site.title }}</a>
     <hr />
   </h1>
@@ -14,6 +14,7 @@ layout: default
     {% endfor %}
   </nav>
 </header>
+
 <div class="content list">
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
