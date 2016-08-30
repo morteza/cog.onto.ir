@@ -1,0 +1,61 @@
+---
+
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "Samim", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    960px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+.english.tags {
+  float: right;
+}
+
+.farsi.tags {
+  float: left;
+}
+
+.tag {
+  background: #eee;
+  border-radius: 3px;
+  border-width: 0px;
+  color: #999;
+  display: inline-block;
+  height: 27px;
+  line-height: 29px;
+  padding: 0 10px 0 10px;
+  position: relative;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  font-size: 13px;
+  text-transform: none;;
+}
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }

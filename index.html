@@ -26,7 +26,14 @@ layout: default
     </h2>
     <div class="list-post-date">
       <!-- <time>{{ post.date | date_to_string }}</time> -->
-      <div class="shamsi date">{{ post.date_fa }}</div>
+      <span class="shamsi date">{{ post.date_fa }}</span>
+      {% if post.tags.size() > 0 %}
+      <span class="farsi tags">
+        {% for tag in site.tags %}
+        <span class="tag">{{ tag | first }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
     </div>
     <div class="list-post-excerpt">
       {{ post.excerpt }}
@@ -39,7 +46,14 @@ layout: default
       <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
     <div class="list-post-date">
-      <time>{{ post.date | date: '%B %d, %Y' }}</time>
+      <span>{{ post.date | date: '%B %d, %Y' }}</span>
+      {% if post.tags.size() > 0 %}
+      <span class="english tags">
+        {% for tag in site.tags %}
+        <span class="tag">{{ tag | first }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
     </div>
     <div class="list-post-excerpt">
       {{ post.excerpt }}
