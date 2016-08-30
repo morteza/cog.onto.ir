@@ -48,8 +48,27 @@ $content-width:    960px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-a.header {
+.list-post-title a, a, a:visited {
   color: $brand-color;
+}
+
+.list-post-title a:hover, a:hover {
+  color: darken($brand-color, 15%);
+  text-decoration: none;
+}
+a.english.continue, a.english.continue:visited {
+  color: $brand-color;
+  float: right;
+}
+
+a.farsi.continue, a.farsi.continue:visited {
+  color: $brand-color;
+  float: left;
+}
+
+a.farsi.continue:hover, a.english.continue:hover {
+  text-decoration: none;
+  color: darken($brand-color, 15%);
 }
 
 .return.home {

@@ -27,11 +27,11 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 .english.tags {
-  float: right;
+  float: left;
 }
 
 .farsi.tags {
-  float: left;
+  float: right;
 }
 
 .tag {
@@ -44,7 +44,7 @@ $on-laptop:        800px;
   line-height: 29px;
   padding: 0 10px 0 10px;
   position: relative;
-  margin: 0 3px 3px 0;
+  margin: 3px 3px 3px 3px;
   text-decoration: none;
   -webkit-transition: color 0.2s;
   font-size: 13px;
