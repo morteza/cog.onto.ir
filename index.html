@@ -28,15 +28,21 @@ layout: default
       <!-- <time>{{ post.date | date_to_string }}</time> -->
       <div class="shamsi date">{{ post.date_fa }}</div>
     </div>
+    <div class="list-post-excerpt">
+      {{ post.excerpt }}
+    </div>
   </div>
   {% endif %}
   {% if post.layout == 'post_en' %}
   <div class="list-item" style="direction:ltr">
     <h2 class="list-post-title">
-      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title_fa }}</a>
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
     <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
+      <time>{{ post.date | date: '%B %d, %Y' }}</time>
+    </div>
+    <div class="list-post-excerpt">
+      {{ post.excerpt }}
     </div>
   </div>
   {% endif %}

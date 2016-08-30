@@ -26,6 +26,7 @@ timezone: Asia/Tehran
 encoding: utf-8
 twitter_username:
 github_username: morteza
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
