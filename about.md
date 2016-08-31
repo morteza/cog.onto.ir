@@ -1,11 +1,19 @@
 ---
-layout: page
-title: About Cognitive Science Papers We Like
+layout: page_fa
+title: دربارهٔ مقاله‌های دوست‌داشتنیِ علوم‌شناختی
 permalink: /about/
 ---
 
 
+این وب‌سایت به معرفی کتاب‌ها و مقاله‌هایی دوست‌داشتنی، بامزه و ارزش‌مند در حوزهٔ علوم‌شناختی می‌پردازد. شروع به کار رسمی آن در پایان شهریور ۱۳۹۵ خواهد بود. در حال حاضر وب‌سایت در مرحلهٔ نهایی توسعه می‌باشد.
 
-### Copyright
+برای کسب اطلاعات بیشتر یا پیشنهاد مقاله و کتاب‌های مرتبط با [مرتضا](mailto:ansarinia@me.com) از طریق ایمیل تماس بگیرید، یا به پایگاه توسعهٔ آن در [گیت‌هاب](http://github.com/morteza/cog.onto.ir) مراجعه کنید.
 
->The name "Papers We Love" and the logos for the organization are copyrighted, and under the ownership of Papers We Love Ltd, all rights reserved.
+
+### حقوق مولف
+
+پایگاهِ حاضر تا اطلاع ثانوی و شروع به کار رسمیِ آن، حقوقی برای مولفینِ خود در نظر نگرفته است و استفاده از کُدهای منبع و دیگر منابعِ تولید شده به هر صورت مجاز می‌باشد. با این حال هر یک از مقالات یا کتاب‌ها حقوقِ مولفِ مخصوص به خود را دارند که لازم به رعایت آن‌هاست. ایدهٔ اصلی این پایگاه از پروژه‌ای با حق مولفِ زیر استخراج شده است:
+
+<blockquote style="direction:ltr">
+The name "Papers We Love" and the logos for the organization are copyrighted, and under the ownership of Papers We Love Ltd, all rights reserved.
+</blockquote>

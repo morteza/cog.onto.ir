@@ -95,6 +95,12 @@ a.farsi.continue:hover, a.english.continue:hover {
   text-align: center;
 }
 
+.copyleft {
+  font: 18px Arial, sans-serif;
+  display:inline-block;
+  transform: rotate(180deg);
+}
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
