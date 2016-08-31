@@ -82,6 +82,19 @@ a.farsi.continue:hover, a.english.continue:hover {
 .return.home {
   color: $grey-color-dark;
 }
+
+.masthead hr {
+  border: 0;
+  border-top: .5px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.masthead-nav {
+  text-align: center;
+}
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {

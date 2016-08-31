@@ -22,6 +22,7 @@ description: > # this means to ignore newlines until "baseurl:"
   It is currently available at http://cog.onto.ir.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cog.onto.ir" # the base hostname & protocol for your site
+author: "Morteza Ansarinia"
 timezone: Asia/Tehran
 encoding: utf-8
 twitter_username:
@@ -30,3 +31,20 @@ excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
+
+# Navigation
+# nav_en:
+#   - name: "About"
+#     href: "//cog.onto.ir/about"
+#   - name: "Articles"
+#     href: "//cog.onto.ir"
+#   - name: "Books"
+#     href: "//cog.onto.ir/books"
+
+# nav_fa:
+#   - name: "Aboutf"
+#     href: "//cog.onto.ir/about"
+#   - name: "Articlesf"
+#     href: "//cog.onto.ir"
+#   - name: "Booksf"
+#     href: "//cog.onto.ir/books"

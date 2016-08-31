@@ -6,10 +6,13 @@ layout: default
     <a href="{{ site.baseurl }}/">{{ site.title_fa }}</a>
     <div style="height:15px"></div>
     <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-    <hr />
   </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
+  <hr />
+  <nav class="masthead-nav" style="direction:rtl">
+    {% for nav in site.nav_en %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+    {% for nav in site.nav_fa %}
     <a href="{{ nav.href }}">{{ nav.name }}</a>
     {% endfor %}
   </nav>
