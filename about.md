@@ -1,5 +1,5 @@
 ---
-layout: page_fa
+layout: default
 title: دربارهٔ مقاله‌های دوست‌داشتنیِ علوم‌شناختی
 permalink: /about/
 ---

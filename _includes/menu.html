@@ -1,0 +1,20 @@
+<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.slicknav.min.js"></script>
+
+<ul id="menu" style="display:none">
+  <li><a class="scroll" href="/">خانه</a></li>
+  <li><a class="scroll" href="/about">درباره</a></li>
+  <li><a class="scroll" href="/">مقاله‌ها</a></li>
+  <li><a class="disabled scroll" href="/books">کتاب‌ها</a></li>
+  <li><a class="disabled scroll" href="/categories">دسته‌بندی‌ها</a></li>
+  <li><a class="disabled scroll" href="/glossary">واژه‌نامه</a></li>
+</ul>
+
+<script>
+	$(function(){
+		$('#menu').slicknav({
+      prependTo:'body',
+      label: ""
+    });
+	});
+</script>
