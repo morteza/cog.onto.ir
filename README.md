@@ -1,5 +1,5 @@
 # Cognitive Science Papers We Like
-*Cognitive Science Papers We Like* (or just read?), inspired by *Papers We Love<sup>&copy;</sup>* Project, lists intersting papers and publications in Cognitive Science fields. It is currently available in Farsi language, at [cog.onto.ir](http://cog.onto.ir).
+*Cognitive Science Papers We Like* (or just read?), inspired by *Papers We Love<sup>&copy;</sup>* project, lists intersting papers and publications in Cognitive Sciences fields. It is currently available in Farsi language, at [cog.onto.ir](http://cog.onto.ir).
 
 # License
 
