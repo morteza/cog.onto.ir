@@ -101,6 +101,19 @@ a.farsi.continue:hover, a.english.continue:hover {
   transform: rotate(180deg);
 }
 
+figure img {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
