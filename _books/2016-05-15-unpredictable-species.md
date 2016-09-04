@@ -1,12 +1,12 @@
 ---
-title: "Unpredictable Species: Makes Humans Unique"
+title: "Unpredictable Species: What Makes Humans Unique"
 title_fa:
 layout: post_en
 date: '2016-09-04'
 date_fa:
 categories: books
 collection: books
-shop_link: https://www.amazon.com/Unpredictable-Species-Makes-Humans-Unique/dp/0691148589/
+amazon: https://www.amazon.com/Unpredictable-Species-Makes-Humans-Unique/dp/0691148589/
 pdf:
 isbn: 978-0691148588
 tags:
@@ -19,7 +19,7 @@ tags:
 
 ---
 
-> *Lieberman, P. (2013). The unpredictable species: What makes humans unique. Princeton University Press.* [Amazon Link]({{ page.shop_link }}).
+> *Lieberman, P. (2013). The unpredictable species: What makes humans unique. Princeton University Press.* ([Amazon]({{ page.amazon }})).
 
 <figure>
   <img src="https://images-na.ssl-images-amazon.com/images/I/51g4OA-hGOL._SX327_BO1,204,203,200_.jpg" alt="Unpredictable Species: Makes Humans Unique">
