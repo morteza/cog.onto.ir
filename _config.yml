@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title_fa: مقاله‌های دوست‌داشتنیِ علوم‌شناختی
 title: Cognitive Science Papers We Love
+
 email: ansarinia@me.com
 description: > # this means to ignore newlines until "baseurl:"
   Cognitive Science Papers We Like, inspired by *Papers We Love* Project
@@ -22,15 +23,31 @@ description: > # this means to ignore newlines until "baseurl:"
   It is currently available at http://cog.onto.ir.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://cog.onto.ir" # the base hostname & protocol for your site
-author: "Morteza Ansarinia"
+author:
+  name: "Morteza Ansarinia"
+  email: "ansarinia@me.com"
+  github: morteza
 timezone: Asia/Tehran
 encoding: utf-8
+paginate: 10
 twitter_username:
 github_username: morteza
 excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
+
+collections:
+  books:
+    output: true
+    permalink: /books/:title/
+    label: Books
+    label_fa: کتاب‌ها
+  tools:
+    output: true
+    permalink: /tools/:title/
+    label: Tools
+    label_fa: ابزار
 
 # Navigation
 # nav_en:

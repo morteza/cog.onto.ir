@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<header class="masthead">
+  <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/books">کتاب‌های دوست‌داشتنیِ علوم‌شناختی</a>
+    <div style="height:15px"></div>
+    <a href="{{ site.baseurl }}/books">Cognitive Science Books We Love</a>
+  </h1>
+  <hr />
+  <nav class="masthead-nav" style="direction:rtl">
+    {% for nav in site.nav_en %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+    {% for nav in site.nav_fa %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+  </nav>
+</header>
+
+<div class="content list">
+{% if site.books.size == 0 %}
+  <h2>No post found</h2>
+{% else %}
+{% for post in site.books %}
+  {% if post.layout == 'post_fa' %}
+  <div class="list-item">
+    <span class="list-post-date"><span class="shamsi date">{{ post.date_fa }}</span></span>
+
+    <h2 class="list-post-title">
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title_fa }}</a>
+    </h2>
+
+    <div class="farsi tags">
+      {% for tag in post.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% if post.tags.size > 0 %}
+    <div class="" style="height: 50px;"></div>
+    {% endif %}
+
+    <div class="list-post-excerpt">
+      {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="farsi continue">ادامه &larr;</a>
+      {% endif %}
+    </div>
+
+  </div>
+  <br />
+  <hr />
+  {% endif %}
+
+  {% if post.layout == 'post_en' %}
+  <div class="list-item" style="direction:ltr">
+    <span class="list-post-date"><span>{{ post.date | date: '%B %d, %Y' }}</span></span>
+    <h2 class="list-post-title">
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+
+    <div class="english tags">
+      {% for tag in post.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% if post.tags.size > 0 %}
+    <div class="" style="height: 50px;"></div>
+    {% endif %}
+
+    <div class="list-post-excerpt">
+      {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="english continue">Continue Reading &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+  <br />
+  <hr />
+  {% endif %}
+{% endfor %}
+{% endif %}
+</div>
