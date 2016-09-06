@@ -138,13 +138,13 @@
              // reset keys
              Reveal.configure({
                keyboard: {
-                 13: 'next', // go to the next slide when the ENTER key is pressed
+                 13: null, // go to the next slide when the ENTER key is pressed
                  27: function() {}, // do something custom when ESC is pressed
                  32: null, // disabled default
                  37: null, // left
-                 38: null, //up
-                 39: 'next', // right
-                 40: null // down
+                 38: 'next', //up
+                 39: null, // right
+                 40: 'next' // down
                }
               });
            }, 2000);
@@ -163,12 +163,12 @@
           // Called each time the slide with the "stats" state is made visible
             Reveal.configure({
               keyboard: {
-                13: 'next', // go to the next slide when the ENTER key is pressed
+                13: null, // go to the next slide when the ENTER key is pressed
                 27: function() {}, // do something custom when ESC is pressed
                 32: null, // disabled default
-                37: move1, // left
+                37: null, // left
                 38: move1, //up
-                39: move1, // right
+                39: null, // right
                 40: move1 // down
              }
             });
@@ -211,6 +211,17 @@
             var reward = Math.floor((Math.random() * 10) - 5);
             totalReward += reward;
             $(".state.reward").html(""+reward);
+            Reveal.configure({
+              keyboard: {
+                13: 'next', // go to the next slide when the ENTER key is pressed
+                27: 'next', // do something custom when ESC is pressed
+                32: 'next', // disabled default
+                37: 'next', // left
+                38: 'next', //up
+                39: 'next', // right
+                40: 'next' // down
+              }
+             });
           });
           Reveal.addEventListener( 'image-5', function() {
             $('.total.reward').html(""+totalReward);
