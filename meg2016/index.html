@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IPM Neuroimaging Journal Club - Kurth-Nelson (2016) Demo</title>
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.white.css">
+  </head>
+  <body>
+      <div class="reveal">
+          <div class="slides">
+              <section data-autoslide="60000">
+                <p class="ui info message">Start: cat</p>
+                <br />
+                <p>(neg) three</p>
+                <p>(neg) waters</p>
+              </section>
+              <section data-autoslide="1000">Get ready to enter moves</section>
+              <section data-autoslide="3000" data-state="enter-moves-1-state">
+                Enter moves
+                <div class="">
+                  <span class="ui circular grey move10 label"></span>
+                  <span class="ui circular grey move11 label"></span>
+                  <span class="ui circular grey move12 label"></span>
+                  <span class="ui circular grey move13 label"></span>
+                </div>
+              </section>
+              <section data-state="image-1">
+                Reward: <span class="state reward"></span>
+                <div class="ui divider"></div>
+                <img src="img/cat.jpg" class="ui centered bordered image">
+                <div class="ui divider"></div>
+                <div class="">
+                  <span class="ui grey move10 label"></span>
+                  <span class="ui grey move11 label"></span>
+                  <span class="ui grey move12 label"></span>
+                  <span class="ui grey move13 label"></span>
+                </div>
+              </section>
+              <section data-state="image-2">
+                Reward: <span class="state reward"></span>
+                <div class="ui divider"></div>
+                <img src="img/pebble.jpg" class="ui centered bordered image">
+                <div class="ui divider"></div>
+                <div class="">
+                  <span class="ui grey move10 label"></span>
+                  <span class="ui grey move11 label"></span>
+                  <span class="ui grey move12 label"></span>
+                  <span class="ui grey move13 label"></span>
+                </div>
+              </section>
+              <section data-state="image-3">
+                Reward: <span class="state reward"></span>
+                <div class="ui divider"></div>
+                <img src="img/tree.jpg" class="ui centered bordered image">
+                <div class="ui divider"></div>
+                <div class="">
+                  <span class="ui grey move10 label"></span>
+                  <span class="ui grey move11 label"></span>
+                  <span class="ui grey move12 label"></span>
+                  <span class="ui grey move13 label"></span>
+                </div>
+              </section>
+              <section data-state="image-4">
+                Reward: <span class="state reward"></span>
+                <div class="ui divider"></div>
+                <img src="img/hand.jpg" class="ui centered bordered image">
+                <div class="ui divider"></div>
+                <div class="">
+                  <span class="ui grey move10 label"></span>
+                  <span class="ui grey move11 label"></span>
+                  <span class="ui grey move12 label"></span>
+                  <span class="ui grey move13 label"></span>
+                </div>
+              </section>
+              <section data-state="image-5">
+                <img src="img/water.jpg" class="ui centered bordered image">
+                <div class="ui divider"></div>
+                <div class="">
+                  <span class="ui grey move10 label"></span>
+                  <span class="ui grey move11 label"></span>
+                  <span class="ui grey move12 label"></span>
+                  <span class="ui grey move13 label"></span>
+                </div>
+              </section>
+              <section>
+                Thank You!
+              </section>
+          </div>
+      </div>
+      <div class="ui finish small modal">
+        <div class="content">
+          <div class="description">
+            <p class="ui info message">
+              Thank you! The experiment is now finished :-)
+              <br />
+              Your total reward is <span class="total reward"></span>.
+            </p>
+            <p>
+              <strong>Reference:</strong> Kurth-Nelson, Z., Economides, M., Dolan, R. J., & Dayan, P. (2016). Fast Sequences of Non-spatial State Representations in Humans. Neuron, 91(1), 194-204. <a href="http://doi.org/10.1016/j.neuron.2016.05.028">View</a>
+            </p>
+            <p>
+              By: <a href="mailto:ansarinia@me.com">Morteza Ansarinia</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/semantic.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
+       var images = ["chair.jpg", "cat.jpg", "water.jpg", "tree.jpg", "hand.jpg", "pebble.jpg"];
+       var moves1 = [0, 0, 0, 0];
+       var currentMove1 = 0;
+       var totalReward = 0.0;
+       function move1(event) {
+         if (currentMove1 < 5)
+           moves1[currentMove1] = event.which;
+         $(".move1"+currentMove1).removeClass("grey");
+         $(".move1"+currentMove1).addClass("green");
+         if (event.which==38)
+           $(".move1"+currentMove1).html("<i class='arrow up icon'></i> UP");
+         if (event.which==40)
+           $(".move1"+currentMove1).html("<i class='arrow down icon'></i> DOWN");
+         if (currentMove1==3){ //last move of 4
+           setTimeout(function() {
+             Reveal.next();
+             // reset keys
+             Reveal.configure({
+               keyboard: {
+                 13: 'next', // go to the next slide when the ENTER key is pressed
+                 27: function() {}, // do something custom when ESC is pressed
+                 32: null, // disabled default
+                 37: null, // left
+                 38: null, //up
+                 39: 'next', // right
+                 40: null // down
+               }
+              });
+           }, 2000);
+         }
+         currentMove1++;
+       }
+      </script>
+      <script>
+          Reveal.initialize({
+            hideAddressBar: true,
+             transition: 'fade',
+             autoSlideStoppable: false,
+             controls: false,
+          });
+          Reveal.addEventListener( 'enter-moves-1-state', function() {
+          // Called each time the slide with the "stats" state is made visible
+            Reveal.configure({
+              keyboard: {
+                13: 'next', // go to the next slide when the ENTER key is pressed
+                27: function() {}, // do something custom when ESC is pressed
+                32: null, // disabled default
+                37: move1, // left
+                38: move1, //up
+                39: move1, // right
+                40: move1 // down
+             }
+            });
+          });
+          Reveal.addEventListener( 'image-1', function() {
+            $('.ui.move10.label').removeClass("grey");
+            $('.ui.move10.label').removeClass("green");
+            $('.ui.move10.label').addClass("red");
+            var i = 0;
+            for (i=0;i<4;i++) {
+              if (moves1[0]==38) {
+                $('.ui.move1'+i+'.label').html("<i class='arrow up icon'></i> UP");
+              } else
+              $('.ui.move1'+i+'.label').html("<i class='arrow down icon'></i> DOWN");
+            };
+            var reward = Math.floor((Math.random() * 10) - 5);
+            totalReward += reward;
+            $(".state.reward").html(""+reward);
+          });
+          Reveal.addEventListener( 'image-2', function() {
+            $('.ui.move11.label').removeClass("grey");
+            $('.ui.move11.label').removeClass("green");
+            $('.ui.move11.label').addClass("red");
+            var reward = Math.floor((Math.random() * 10) - 5);
+            totalReward += reward;
+            $(".state.reward").html(""+reward);
+          });
+          Reveal.addEventListener( 'image-3', function() {
+            $('.ui.move12.label').removeClass("grey");
+            $('.ui.move12.label').removeClass("green");
+            $('.ui.move12.label').addClass("red");
+            var reward = Math.floor((Math.random() * 10) - 5);
+            totalReward += reward;
+            $(".state.reward").html(""+reward);
+          });
+          Reveal.addEventListener( 'image-4', function() {
+            $('.ui.move13.label').removeClass("grey");
+            $('.ui.move13.label').removeClass("green");
+            $('.ui.move13.label').addClass("red");
+            var reward = Math.floor((Math.random() * 10) - 5);
+            totalReward += reward;
+            $(".state.reward").html(""+reward);
+          });
+          Reveal.addEventListener( 'image-5', function() {
+            $('.total.reward').html(""+totalReward);
+            $('.ui.finish.modal').modal({closable:false}).modal('show');
+          });
+      </script>
+  </body>
+</html>
