@@ -1,5 +1,5 @@
 ---
-title: 'Human-Level Concept Learning Through Probabilistic Program Induction'
+title: 'Social Transmission of Experience of Agency: An Experimental Study'
 title_fa:
 layout: post_en
 date: '2016-09-06'
