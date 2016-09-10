@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Samim;
+  src: url('../fonts/Samim.eot');
+  src: url('../fonts/Samim.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Samim.woff') format('woff'),
+       url('../fonts/Samim.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Samim;
+  src: url('../fonts/Samim-Bold.eot');
+  src: url('../fonts/Samim-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Samim-Bold.woff') format('woff'),
+       url('../fonts/Samim-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+html, body {
+  direction: rtl;
+}
+
+.ui.fluid.survey.bordered.image {
+  max-height: 80vh;
+  max-width: inherit;
+  width: auto;
+}

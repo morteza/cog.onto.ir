@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stereotype Content Model Survey</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/semantic.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="assets/css/range.slider.css">
+<!--
+    <script src="assets/js/react.js"></script>
+    <script src="assets/js/react-dom.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+-->
+  </head>
+  <body class="ui container">
+
+    <ul id="menu" style="display:none">
+      <li><a class="disabled scroll" href="#">آزمون جدید</a></li>
+      <li><a class="disabled scroll" href="#">نمایش نتایجِ موجود</a></li>
+      <li><a class="disabled scroll" href="#">ارسال نتایج به سرور</a></li>
+    </ul>
+
+    <div class="ui top aligned center aligned two column grid" id="content">
+      <div class="top aligned column">
+        <div class="ui blue header">لطفن براساس تصاویر ارائه‌شده به پرسش‌ها پاسخ دهید.</div>
+        نمرهٔ ۱ کمترین، و نمرهٔ ۵ بالاترین نمره است.
+        <form class="ui right aligned basic segment form" id="qform">
+          <div class="ui basic segment field" id="q1">
+            <label>سوال یک</label>
+            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
+            <input type='range' max="5" min="1" step="1" name="q1"/>
+          </div> <!--/#q1-->
+          <div class="ui basic segment field" id="q1">
+            <label>سوال دو</label>
+            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
+            <input type='range' max="5" min="1" step="1" name="q2"/>
+          </div> <!--/#q1-->
+          <div class="ui basic segment field" id="q1">
+            <label>سوال سه</label>
+            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
+            <input type='range' max="5" min="1" step="1" name="q3"/>
+          </div> <!--/#q1-->
+          <div class="ui basic segment field" id="q1">
+            <label>سوال چهار</label>
+            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
+            <input type='range' max="5" min="1" step="1" name="q4"/>
+          </div> <!--/#q1-->
+          <div class="ui field">
+            <input type="submit" class="ui compact primary button" value="ثبت نتیجه" id="save-results"/>
+          </div>
+        </form> <!--/.form-->
+      </div>
+      <div class="column">
+        <img class="ui fluid survey bordered image" src="" id="qimage">
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/semantic.js"></script>
+    <script>
+      $(function(){
+        $('#menu').slicknav({
+          prependTo:'body',
+          label: ""
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        var imageNum = Math.floor((Math.random() * 5) + 1);
+        $("#qimage").attr('src', 'data/images/' + imageNum + '.jpg');
+      });
+      $("#save-results").click(function(){
+        var formData = JSON.stringify($("#qform").serializeArray());
+        alert(formData);
+        $.ajax({
+          type: "POST",
+          url: "//cut.social/scm2016",
+          data: formData,
+          success: function(){},
+          dataType: "json",
+          contentType : "application/json"
+        });
+      });
+    </script>
+    <!--
+    <script type="text/babel" src="./js/app.js"></script>
+  -->
+<!--
+    <h1>Hello World!</h1>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+-->
+  </body>
+</html>
