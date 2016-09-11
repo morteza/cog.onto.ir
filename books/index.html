@@ -20,9 +20,9 @@ layout: default
 
 <div class="content list">
 {% if site.books.size == 0 %}
-  <h2>No post found</h2>
+  <h2>کتابی هنوز موجود نیست...</h2>
 {% else %}
-{% for post in site.books %}
+{% for post in site.books reversed %}
   {% if post.layout == 'post_fa' %}
   <div class="list-item">
     <span class="list-post-date"><span class="shamsi date">{{ post.date_fa }}</span></span>
