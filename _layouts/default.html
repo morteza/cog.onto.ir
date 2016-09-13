@@ -21,8 +21,9 @@
 <body>
   <div class="container">
     {{ content }}
+    <div class="ui divider"></div>
+    <div id="disqus_thread"></div>
   </div>
-  <div id="disqus_thread"></div>
 
   {% if page.comments %}
   <script>
@@ -31,7 +32,7 @@
           this.page.identifier = "{{ page.id }}";
       };
 
-      (function() {  // DON'T EDIT BELOW THIS LINE
+      (function() {
           var d = document, s = d.createElement('script');
 
           s.src = '//cog-onto.disqus.com/embed.js';
