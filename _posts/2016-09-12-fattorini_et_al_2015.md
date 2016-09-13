@@ -2,7 +2,7 @@
 title: 'Perceiving Numbers Does not Cause Automatic Shifts of Spatial Attention'
 title_fa:
 layout: post_en
-date: '2016-09-13'
+date: '2016-09-12'
 date_fa:
 comments: true
 categories: article
