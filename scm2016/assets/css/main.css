@@ -18,6 +18,7 @@
 
 html, body {
   direction: rtl;
+  padding-top: 20px;
 }
 
 .ui.fluid.survey.bordered.image {
