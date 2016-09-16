@@ -22,44 +22,71 @@
       <li><a class="disabled scroll" href="#">ارسال نتایج به سرور</a></li>
     </ul>
 
-    <div class="ui top aligned center aligned two column grid" id="content">
-      <div class="top aligned column">
+    <div class="ui top aligned center aligned two column stackable grid" id="content">
+      <div class="column">
+        <img class="ui centered large survey bordered image" src="" id="qimage">
+      </div>
+      <div class="top column">
         <div class="ui blue header">لطفن براساس تصاویر ارائه‌شده به پرسش‌ها پاسخ دهید.</div>
         نمرهٔ ۱ کمترین، و نمرهٔ ۵ بالاترین نمره است.
         <form class="ui right aligned basic segment form" id="qform">
           <div class="ui basic segment field" id="q1">
-            <label>سوال یک</label>
+            <label>آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟</label>
             <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
             <input type='range' max="5" min="1" step="1" name="q1"/>
           </div> <!--/#q1-->
-          <div class="ui basic segment field" id="q1">
-            <label>سوال دو</label>
+          <div class="ui basic segment field" id="q2">
+            <label>آیا این تصویر نشان‌دهندهٔ کودکی بیمار یا ناتوان است؟</label>
             <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
             <input type='range' max="5" min="1" step="1" name="q2"/>
-          </div> <!--/#q1-->
-          <div class="ui basic segment field" id="q1">
-            <label>سوال سه</label>
+          </div> <!--/#q2-->
+          <div class="ui basic segment field" id="q3">
+            <label>آیا این تصویر نشان‌دهندهٔ کودکی فقیر یا بی‌خانمان است؟</label>
             <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
             <input type='range' max="5" min="1" step="1" name="q3"/>
-          </div> <!--/#q1-->
-          <div class="ui basic segment field" id="q1">
-            <label>سوال چهار</label>
+          </div> <!--/#q3-->
+          <div class="ui basic segment field" id="q4">
+            <label>آیا این تصویر نشان‌دهندهٔ کودکی مرفه و پول‌دار است؟</label>
             <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
             <input type='range' max="5" min="1" step="1" name="q4"/>
-          </div> <!--/#q1-->
+          </div> <!--/#q4-->
           <div class="ui field">
             <input type="submit" class="ui compact primary button" value="ثبت نتیجه" id="save-results"/>
           </div>
         </form> <!--/.form-->
       </div>
-      <div class="column">
-        <img class="ui fluid survey bordered image" src="" id="qimage">
-      </div>
     </div>
 
+    <!-- Consent Modal -->
+    <div class="ui small modal">
+      <div class="content" style="direction:rtl;text-align:right">
+        شرکت کننده گرامی<br />
+        با تشکر از اینکه در مطالعه حاضر شرکت کرده اید. در ادامه تصاویری را مشاهده می­کنید که لازم است به سؤالات مرتبط با هر تصویر پاسخ دهید.<br />
+        تعدادی کلمات کلیدی در سؤالات مطرح شده وجود دارد که تعاریف آن در زیر آورده شده است:<br /><br />
+
+        کودک بیمار یا ناتوان: کودکی که از چهره یا حالات بدنی اش مشخص است که به بیماری یا نقص جسمانی خاصی مبتلا است<br />
+        کودک فقیر یا بی خانمان: کودکی که از حالات ظاهری یا موقعیتی که در ان قرار دارد، مشخص است که فقیر، کم پول یا بی خانمان است.<br />
+        کودک پولدار: کودکی که از وضعیت ظاهری یا موقعیتی که در آن است مشخص است که پولدار است<br />
+        کودک معمولی: کودکی که هیچ یک از ویژگی های کودکان گروه های دیگر را نداشته باشد کودک معمولی نامیده می شود.<br />
+        <br />
+        لطفاً با دقت به هر تصویر نگاه کنید و بهترین پاسخ ممکن را انتخاب کنید<br />
+        <br />
+        برای ادامه کلیک کنید
+        </div>
+      <div class="actions">
+        <a href="#" class="ui primary approve icon labeled button">
+          ادامه
+          <i class="left arrow icon"></i>
+        </a>
+      </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/semantic.js"></script>
+    <script>
+    $('.ui.modal')
+      .modal('show');
+    </script>
     <script>
       $(function(){
         $('#menu').slicknav({
