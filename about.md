@@ -17,3 +17,7 @@ permalink: /about/
 <blockquote style="direction:ltr">
 The name "Papers We Love" and the logos for the organization are copyrighted, and under the ownership of Papers We Love Ltd, all rights reserved.
 </blockquote>
+
+### تماس با ما
+
+برای تماس با ما می‌توانید از لینک منوی بالا که به آدرس [تماس با ما](http://cut.social/contact) می‌رود استفاده کنید. بهتر آن است که در متن ذکر کنید درباره این پایگاه انتقاد یا پیشنهادی دارید.
