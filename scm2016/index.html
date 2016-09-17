@@ -122,7 +122,7 @@
             </div>
           </div> <!--/#q7-->
           <div class="ui field">
-            <input type="submit" class="ui compact primary button" value="ثبت نتیجه" id="save-results"/>
+            <input type="submit" class="ui compact primary submit button" value="ثبت نتیجه" id="save-results"/>
           </div>
       </div>
     </div>
@@ -192,10 +192,15 @@
           data: formData,
           success: function(){
             alert("متشکریم. آزمون پایان یافته است :-)");
+            $('.ui.submit.button').hide();
           },
           dataType: "json",
           contentType : "multipart/form-data"
+        }).done(function() {
+          alert("متشکریم. آزمون پایان یافته است :-)");
+          $('.ui.submit.button').hide();
         });
+
         evt.preventDefault();
       });
     </script>
