@@ -192,16 +192,16 @@
           data: formData,
           success: function(){
             alert("متشکریم. آزمون پایان یافته است :-)");
-            $('.ui.submit.button').hide();
+            $('.ui.compact.primary.submit.button').hide();
           },
           dataType: "json",
           contentType : "multipart/form-data"
         }).done(function() {
           alert("متشکریم. آزمون پایان یافته است :-)");
-          $('.ui.submit.button').hide();
+          $('.ui.compact.primary.submit.button').hide();
         });
-
         evt.preventDefault();
+        $('.ui.compact.primary.submit.button').hide();
       });
     </script>
     <!--
