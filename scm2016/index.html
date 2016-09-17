@@ -129,7 +129,7 @@
   </form> <!--/.form-->
 
     <!-- Consent Modal -->
-    <div class="ui small modal">
+    <div class="ui small consent modal">
       <div class="content" style="direction:rtl;text-align:right">
 شرکت کننده گرامی<br />
         با تشکر از اینکه در مطالعه حاضر شرکت کرده اید. در ادامه تصاویری را مشاهده می­کنید که لازم است به سؤالات مرتبط با هر تصویر پاسخ دهید.
@@ -156,8 +156,7 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/semantic.js"></script>
     <script>
-    $('.ui.modal')
-      .modal('show');
+    $('.ui.small.consent.modal').modal('show');
     </script>
     <script>
       $(function(){
@@ -189,13 +188,21 @@
         //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
         $.ajax({
           type: "POST",
-          url: "https://cut.social/scm2016/save",
+          url: "//cut.social/scm2016/save",
           data: formData,
           success: function(){
             alert("متشکریم. آزمون پایان یافته است :-)");
           },
           dataType: "json",
           contentType : "application/json"
+        }).done(function() {
+          alert( "done" );
+        })
+        .fail(function() {
+          alert( "error" );
+        })
+        .always(function() {
+          alert( "always" );
         });
         evt.preventDefault();
       });
