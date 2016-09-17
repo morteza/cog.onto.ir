@@ -194,15 +194,7 @@
             alert("متشکریم. آزمون پایان یافته است :-)");
           },
           dataType: "json",
-          contentType : "application/json"
-        }).done(function() {
-          alert( "done" );
-        })
-        .fail(function() {
-          alert( "error" );
-        })
-        .always(function() {
-          alert( "always" );
+          contentType : "multipart/form-data"
         });
         evt.preventDefault();
       });
