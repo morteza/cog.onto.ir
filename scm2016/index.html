@@ -23,22 +23,39 @@
       <li><a class="disabled scroll" href="#">ارسال نتایج به سرور</a></li>
     </ul>
   -->
-  <form class="ui right aligned basic segment form" id="qform" onsubmit="return false;"  method="POST">
+  <form class="ui right aligned segment form" id="qform" onsubmit="return false;"  method="POST">
     <div class="ui top aligned right aligned stackable page grid" id="common-content">
       <div class="sixteen wide column">
-        <div type="ui field">
+        <div type="field">
           <label>چند سال دارید؟</label>
-          <input type="text" value="" name="q1" />
+          <br />
+          <input type="text" value="" name="q1.1" />
+          <div class="ui hidden divider"></div>
+        </div>
+        <div type="field">
+          <label>جنسیت؟</label>
+          <br />
+          <select class="ui dropdown" name="q1.2">
+            <option value="yes">مرد</option>
+            <option value="no">زن</option>
+            <option value="-">علاقه‌ای به اعلام ندارم</option>
+          </select>
           <div class="ui hidden divider"></div>
         </div>
         <div type="ui field">
           <label>وضعیت اقتصادیِ خود را چگونه می‌دانید؟</label>
-          <input type="text" value="" name="q2" />
+          <br />
+          <input type="text" value="" name="q1.3" />
           <div class="ui hidden divider"></div>
         </div>
         <div type="ui field">
           <label>آیا این تصویر نشان دهنده کودک ۴ تا ۶ سال است؟</label>
-          <input type="text" value="" name="q3" />
+          <br />
+          <select class="ui dropdown" name="q1.4">
+            <option value="yes">بلی</option>
+            <option value="no">خیر</option>
+            <option value="-">مشخص نیست</option>
+          </select>
           <div class="ui hidden divider"></div>
         </div>
       </div>
@@ -52,7 +69,7 @@
       </div>
       <div class="top column">
         <div class="ui blue header">لطفن براساس تصاویر ارائه‌شده به پرسش‌ها پاسخ دهید.</div>
-        نمرهٔ ۱ کمترین، و نمرهٔ ۵ بالاترین نمره است.
+        نمرهٔ ۱ کمترین، و نمرهٔ ۶ بالاترین نمره است.
           <div class="ui basic segment field" id="q4">
             <label>آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟</label>
             <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
@@ -147,7 +164,7 @@
         </div>
       <div class="actions">
         <a href="#" class="ui primary approve icon labeled button">
-          ادامه
+          موافقم و ادامه
           <i class="left arrow icon"></i>
         </a>
       </div>
@@ -156,7 +173,10 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <script src="assets/js/semantic.js"></script>
     <script>
-    $('.ui.small.consent.modal').modal('show');
+    $('.ui.small.consent.modal').modal({
+      closable:false
+    }).modal('show');
+    $("select").dropdown();
     </script>
     <script>
       $(function(){
@@ -190,15 +210,14 @@
           type: "POST",
           url: "https://cut.social/scm2016/save",
           data: formData,
-          success: function(){
-            alert("متشکریم. آزمون پایان یافته است :-)");
-            $('.ui.compact.primary.submit.button').hide();
-          },
           dataType: "json",
-          contentType : "multipart/form-data"
+          contentType: "multipart/form-data;charset=UTF-8"
         }).done(function() {
-          alert("متشکریم. آزمون پایان یافته است :-)");
           $('.ui.compact.primary.submit.button').hide();
+          alert("متشکریم. آزمون پایان یافته است.");
+        }).fail(function(xhr) {
+          $('.ui.compact.primary.submit.button').hide();
+          alert("خطا در ارسال نتایج.");
         });
         evt.preventDefault();
         $('.ui.compact.primary.submit.button').hide();
