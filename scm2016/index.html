@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>نظرسنجی ۲۰۱۶ - پژوهشکده علوم‌شناختی دانشگاه شهید بهشتی</title>
 
+    <link rel="stylesheet" href="assets/css/semantic.rtl.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/semantic.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
-    <link rel="stylesheet" href="assets/css/range.slider.css">
-<!--
-    <script src="assets/js/react.js"></script>
-    <script src="assets/js/react-dom.js"></script>
-    <script src="assets/js/browser.min.js"></script>
--->
-  </head>
-  <body class="ui container">
 
-  <!--
-    <ul id="menu" style="display:none">
-      <li><a class="disabled scroll" href="#">آزمون جدید</a></li>
-      <li><a class="disabled scroll" href="#">نمایش نتایجِ موجود</a></li>
-      <li><a class="disabled scroll" href="#">ارسال نتایج به سرور</a></li>
-    </ul>
-  -->
-  <form class="ui right aligned segment form" id="qform" onsubmit="return false;"  method="POST">
-    <div class="ui top aligned right aligned stackable page grid" id="common-content">
-      <div class="sixteen wide column">
-        <div type="field">
-          <label>چند سال دارید؟</label>
-          <br />
-          <input type="text" value="" name="q1.1" />
-          <div class="ui hidden divider"></div>
-        </div>
-        <div type="field">
-          <label>جنسیت؟</label>
-          <br />
-          <select class="ui dropdown" name="q1.2">
-            <option value="yes">مرد</option>
-            <option value="no">زن</option>
-            <option value="-">علاقه‌ای به اعلام ندارم</option>
-          </select>
-          <div class="ui hidden divider"></div>
-        </div>
-        <div type="ui field">
-          <label>وضعیت اقتصادیِ خود را چگونه می‌دانید؟</label>
-          <br />
-          <input type="text" value="" name="q1.3" />
-          <div class="ui hidden divider"></div>
-        </div>
-        <div type="ui field">
-          <label>آیا این تصویر نشان دهنده کودک ۴ تا ۶ سال است؟</label>
-          <br />
-          <select class="ui dropdown" name="q1.4">
-            <option value="yes">بلی</option>
-            <option value="no">خیر</option>
-            <option value="-">مشخص نیست</option>
-          </select>
-          <div class="ui hidden divider"></div>
-        </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/semantic.min.js"></script>
+  </head>
+
+<body>
+
+<div class="ui text segment container">
+  <form class="ui fluid form" id="qform" onsubmit="return false;" role="form" method="POST" action="" enctype="multipart/form-data">
+    <input type="hidden" name="assignmentId" value="0" />
+    <div class="two fields">
+      <div class="field">
+        <label>جنسیتِ شما</label>
+        <select class="ui dropdown" name="q1">
+          <option value="yes">مرد</option>
+          <option value="no">زن</option>
+          <option value="-">علاقه‌ای به اعلام ندارم</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>سنِ شما</label>
+        <input type="number" value="" name="q2" min="1" />
+      </div>
+      <div class="field">
+        <label>وضعیت اقتصادیِ شما</label>
+        <select class="ui dropdown" name="q3">
+          <option value="5">بالا</option>
+          <option value="4">متوسط رو به بالا</option>
+          <option value="3">متوسط</option>
+          <option value="2">متوسط رو به پایین</option>
+          <option value="1">پایین</option>
+          <option value="0">علاقه‌ای به اعلام ندارم</option>
+        </select>
       </div>
     </div>
 
+    <div class="three fields">
+      <div class="field">
+        <label>آیا تصویر زیر نشان‌دهندهٔ کودکی ۴ تا ۶ سال است؟</label>
+        <select class="ui dropdown" name="q1.4">
+          <option value="yes">بلی</option>
+          <option value="no">خیر</option>
+          <option value="-">مشخص نیست</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="ui hidden divider"></div>
     <div class="ui divider"></div>
+    <div class="ui hidden divider"></div>
 
     <div class="ui top aligned center aligned two column stackable grid" id="content">
       <div class="column">
@@ -69,122 +67,90 @@
       </div>
       <div class="top column">
         <div class="ui blue header">لطفن براساس تصاویر ارائه‌شده به پرسش‌ها پاسخ دهید.</div>
+        <div class="ui small info message">
         نمرهٔ ۱ کمترین، و نمرهٔ ۶ بالاترین نمره است.
-          <div class="ui basic segment field" id="q4">
-            <label>آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟</label>
-            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
-            <div class="ui centered six column grid">
-              <div class="centered row">
-                <div class="right aligned column">۱</div>
-                <div class="right aligned column">۲</div>
-                <div class="right aligned column">۳</div>
-                <div class="right aligned column">۴</div>
-                <div class="right aligned column">۵</div>
-                <div class="right aligned column">۶</div>
-              </div>
-              <div class="row">
-                <input type='range' max="6" min="1" step="1" name="q4" value="1"/>
-              </div>
+        </div>
+        <label>آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟</label>
+        <div class="ui hidden divider"></div>
+        <div class="ui centered inline fields">
+          <div class="ui field" id="q4">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۱</label>
             </div>
-          </div> <!--/#q4-->
-          <div class="ui basic segment field" id="q5">
-            <label>آیا این تصویر نشان‌دهندهٔ کودکی بیمار یا ناتوان است؟</label>
-            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
-            <div class="ui centered six column grid">
-              <div class="centered row">
-                <div class="right aligned column">۱</div>
-                <div class="right aligned column">۲</div>
-                <div class="right aligned column">۳</div>
-                <div class="right aligned column">۴</div>
-                <div class="right aligned column">۵</div>
-                <div class="right aligned column">۶</div>
-              </div>
-              <div class="row">
-                <input type='range' max="6" min="1" step="1" name="q5" value="1"/>
-              </div>
+          </div>
+          <div class="ui field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۲</label>
             </div>
-          </div> <!--/#q5-->
-          <div class="ui basic segment field" id="q6">
-            <label>آیا این تصویر نشان‌دهندهٔ کودکی فقیر یا بی‌خانمان است؟</label>
-            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
-            <div class="ui centered six column grid">
-              <div class="centered row">
-                <div class="right aligned column">۱</div>
-                <div class="right aligned column">۲</div>
-                <div class="right aligned column">۳</div>
-                <div class="right aligned column">۴</div>
-                <div class="right aligned column">۵</div>
-                <div class="right aligned column">۶</div>
-              </div>
-              <div class="row">
-                <input type='range' max="6" min="1" step="1" name="q6" value="1"/>
-              </div>
+          </div>
+          <div class="ui field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۳</label>
             </div>
-          </div> <!--/#q6-->
-          <div class="ui basic segment field" id="q7">
-            <label>آیا این تصویر نشان‌دهندهٔ کودکی مرفه و پول‌دار است؟</label>
-            <div class="ui hidden divider" style="margin-top:5px;margin-bottom:5px;"></div>
-            <div class="ui centered six column grid">
-              <div class="centered row">
-                <div class="right aligned column">۱</div>
-                <div class="right aligned column">۲</div>
-                <div class="right aligned column">۳</div>
-                <div class="right aligned column">۴</div>
-                <div class="right aligned column">۵</div>
-                <div class="right aligned column">۶</div>
-              </div>
-              <div class="row">
-                <input type='range' max="6" min="1" step="1" name="q7" value="1"/>
-              </div>
+          </div>
+          <div class="ui field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۴</label>
             </div>
-          </div> <!--/#q7-->
+          </div>
+          <div class="ui field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۵</label>
+            </div>
+          </div>
+          <div class="ui field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="q4" />
+              <label>۶</label>
+            </div>
+          </div>
+        </div>
           <div class="ui field">
             <input type="submit" class="ui compact primary submit button" value="ثبت نتیجه" id="save-results"/>
           </div>
       </div>
     </div>
   </form> <!--/.form-->
-
+</div>
     <!-- Consent Modal -->
     <div class="ui small consent modal">
-      <div class="content" style="direction:rtl;text-align:right">
-شرکت کننده گرامی<br />
-        با تشکر از اینکه در مطالعه حاضر شرکت کرده اید. در ادامه تصاویری را مشاهده می­کنید که لازم است به سؤالات مرتبط با هر تصویر پاسخ دهید.
-        <div class="ui divider"></div>
-        تعدادی کلمات کلیدی در سؤالات مطرح شده وجود دارد که تعاریف آن در زیر آورده شده است:<br /><br />
+      <div class="content">
+      شرکت‌کنندهٔ گرامی
+      <div class="ui hidden divider"></div>
+      با تشکر از این‌که در پژوهش حاضر شرکت کرده‌اید، در ادامه تصاویری را مشاهده می­کنید که لازم است به پرسش‌های مرتبط با هر تصویر پاسخ دهید.
+      <div class="ui divider"></div>
+      تعدادی <strong>کلمات کلیدی</strong> در پرسش‌های مطرح‌شده وجود دارد که تعاریف هر یک در زیر آورده شده است:<br /><br />
 
-        کودک بیمار یا ناتوان: کودکی که از چهره یا حالات بدنی اش مشخص است که به بیماری یا نقص جسمانی خاصی مبتلا است<br />
-        کودک فقیر یا بی خانمان: کودکی که از حالات ظاهری یا موقعیتی که در ان قرار دارد، مشخص است که فقیر، کم پول یا بی خانمان است.<br />
-        کودک پولدار: کودکی که از وضعیت ظاهری یا موقعیتی که در آن است مشخص است که پولدار است<br />
-        کودک معمولی: کودکی که هیچ یک از ویژگی های کودکان گروه های دیگر را نداشته باشد کودک معمولی نامیده می شود.<br />
-        <div class="ui divider"></div>
-        لطفاً با دقت به هر تصویر نگاه کنید و بهترین پاسخ ممکن را انتخاب کنید<br />
-        <br />
-        برای ادامه کلیک کنید
-        </div>
+      &mdash; <strong>کودک بیمار یا ناتوان</strong>: کودکی که از چهره یا حالات بدنی‌اش مشخص است که به بیماری یا نقص جسمانی خاصی مبتلا است.<br />
+
+      &mdash; <strong>کودک فقیر یا بی‌خانمان</strong>: کودکی که از حالات ظاهری یا موقعیتی که در آن قرار دارد، مشخص است که فقیر، کم‌پول یا بی‌خانمان است.<br />
+
+      &mdash; <strong>کودک پول‌دار</strong>: کودکی که از وضعیت ظاهری یا موقعیتی که در آن است مشخص است که پول‌دار و مرفه است.<br />
+
+      &mdash; <strong>کودک معمولی</strong>: کودکی که هیچ یک از ویژگی‌های کودکان گروه‌های دیگر را نداشته باشد کودک معمولی نامیده می‌شود.<br />
+
+      <div class="ui divider"></div>
+      لطفاً با دقت به هر تصویر نگاه کنید و بهترین پاسخ ممکن را انتخاب کنید. برای ادامه کلیک کنید.
+      </div>
       <div class="actions">
-        <a href="#" class="ui primary approve icon labeled button">
+        <a href="#" class="ui primary approve icon right labeled button">
           موافقم و ادامه
           <i class="left arrow icon"></i>
         </a>
-      </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
-    <script src="assets/js/semantic.js"></script>
+    </div> <!--/.modal -->
+
     <script>
     $('.ui.small.consent.modal').modal({
       closable:false
     }).modal('show');
-    $("select").dropdown();
-    </script>
-    <script>
-      $(function(){
-        $('#menu').slicknav({
-          prependTo:'body',
-          label: ""
-        });
-      });
+    $("select.dropdown").dropdown();
+    $('#qform').form();
     </script>
     <script>
       // groupCount is the number of images in each group (8 groups)
@@ -208,15 +174,16 @@
         //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
         $.ajax({
           type: "POST",
-          url: "https://cut.social/scm2016/save",
+          url: "http://localhost:8080/scm2016/save",
           data: formData,
           dataType: "json",
           contentType: "multipart/form-data;charset=UTF-8"
         }).done(function() {
           $('.ui.compact.primary.submit.button').hide();
           alert("متشکریم. آزمون پایان یافته است.");
-        }).fail(function(xhr) {
+        }).fail(function(xhr, status, error) {
           $('.ui.compact.primary.submit.button').hide();
+          alert(status + ": " + error);
           alert("خطا در ارسال نتایج.");
         });
         evt.preventDefault();
