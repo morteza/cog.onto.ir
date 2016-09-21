@@ -177,7 +177,7 @@
                 closable:false
               }).modal('show');
             } else {
-              $("#common-questions").hide();
+              $("#common-questions").remove();
             }
             $("input[name='assignmentId']").val(""+uuid);
             $("input[name='assignmentId']").attr("value",""+uuid);
