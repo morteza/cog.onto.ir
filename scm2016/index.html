@@ -167,7 +167,7 @@
       };
       $(document).ready(function(){
         $.ajax({
-          url: "http://localhost:8080/scm2016/uuid",
+          url: "http://cut.social/scm2016/uuid",
           success: function(data){
             var uuid = Cookies.get('scm2016_uuid');
             if(typeof uuid === "undefined"){
@@ -192,7 +192,7 @@
         //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
         $.ajax({
           type: "POST",
-          url: "http://localhost:8080/scm2016/save",
+          url: "http://cut.social/scm2016/save",
           data: formData,
           dataType: "json",
           contentType: "multipart/form-data;charset=UTF-8"
