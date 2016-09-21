@@ -12,6 +12,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/semantic.min.js"></script>
+    <script src="assets/js/cookie.js"></script>
   </head>
 
 <body>
@@ -19,12 +20,13 @@
 <div class="ui text segment container">
   <form class="ui fluid form" id="qform" onsubmit="return false;" role="form" method="POST" action="" enctype="multipart/form-data">
     <input type="hidden" name="assignmentId" value="0" />
+  <div id="common-questions">
     <div class="two fields">
       <div class="field">
         <label>جنسیتِ شما</label>
         <select class="ui dropdown" name="q1">
-          <option value="yes">مرد</option>
-          <option value="no">زن</option>
+          <option value="male">مرد</option>
+          <option value="female">زن</option>
           <option value="-">علاقه‌ای به اعلام ندارم</option>
         </select>
       </div>
@@ -49,7 +51,7 @@
     <div class="three fields">
       <div class="field">
         <label>آیا تصویر زیر نشان‌دهندهٔ کودکی ۴ تا ۶ سال است؟</label>
-        <select class="ui dropdown" name="q1.4">
+        <select class="ui dropdown" name="q4">
           <option value="yes">بلی</option>
           <option value="no">خیر</option>
           <option value="-">مشخص نیست</option>
@@ -59,6 +61,7 @@
 
     <div class="ui hidden divider"></div>
     <div class="ui divider"></div>
+  </div> <!-- /.common-questions -->
     <div class="ui hidden divider"></div>
 
     <div class="ui top aligned center aligned two column stackable grid" id="content">
@@ -75,43 +78,43 @@
         <div class="ui centered inline fields">
           <div class="ui field" id="q4">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="1" defaultValue="1" />
               <label>۱</label>
             </div>
           </div>
           <div class="ui field">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="2" defaultValue="2" />
               <label>۲</label>
             </div>
           </div>
           <div class="ui field">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="3" defaultValue="3" />
               <label>۳</label>
             </div>
           </div>
           <div class="ui field">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="4" defaultValue="4" />
               <label>۴</label>
             </div>
           </div>
           <div class="ui field">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="5" defaultValue="5" />
               <label>۵</label>
             </div>
           </div>
           <div class="ui field">
             <div class="ui radio checkbox">
-              <input type="radio" name="q4" />
+              <input type="radio" name="q5" value="6" defaultValue="6" />
               <label>۶</label>
             </div>
           </div>
         </div>
           <div class="ui field">
-            <input type="submit" class="ui compact primary submit button" value="ثبت نتیجه" id="save-results"/>
+            <input type="submit" class="ui compact primary submit button" value="تصویر بعدی" id="save-btn"/>
           </div>
       </div>
     </div>
@@ -146,9 +149,6 @@
     </div> <!--/.modal -->
 
     <script>
-    $('.ui.small.consent.modal').modal({
-      closable:false
-    }).modal('show');
     $("select.dropdown").dropdown();
     $('#qform').form();
     </script>
@@ -166,10 +166,28 @@
         return "data/images/children/" + groups[groupRandom] + "/" + genders[genderRandom] + "/" + childRandom + "_" + groupsShort[groupRandom] + "_" + gendersShort[genderRandom] + '.jpg';
       };
       $(document).ready(function(){
+        $.ajax({
+          url: "http://localhost:8080/scm2016/uuid",
+          success: function(data){
+            var uuid = Cookies.get('scm2016_uuid');
+            if(typeof uuid === "undefined"){
+              Cookies.set('scm2016_uuid', data);
+              uuid = Cookies.get('scm2016_uuid');
+              $('.ui.small.consent.modal').modal({
+                closable:false
+              }).modal('show');
+            } else {
+              $("#common-questions").hide();
+            }
+            $("input[name='assignmentId']").val(""+uuid);
+            $("input[name='assignmentId']").attr("value",""+uuid);
+          }
+        });
+
         var imagePath = getRandomImageRelativePath(30);
         $("#qimage").attr('src', imagePath);
       });
-      $("#save-results").click(function(evt){
+      $("#save-btn").click(function(evt){
         var formData = JSON.stringify($("#qform").serializeArray());
         //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
         $.ajax({
@@ -180,7 +198,8 @@
           contentType: "multipart/form-data;charset=UTF-8"
         }).done(function() {
           $('.ui.compact.primary.submit.button').hide();
-          alert("متشکریم. آزمون پایان یافته است.");
+          //TODO check if experiment is finished!
+          location.reload();
         }).fail(function(xhr, status, error) {
           $('.ui.compact.primary.submit.button').hide();
           alert(status + ": " + error);
