@@ -167,7 +167,7 @@
       };
       $(document).ready(function(){
         $.ajax({
-          url: "http://cut.social/scm2016/uuid",
+          url: "https://cut.social/scm2016/uuid",
           success: function(data){
             var uuid = Cookies.get('scm2016_uuid');
             if(typeof uuid === "undefined"){
@@ -192,7 +192,7 @@
         //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
         $.ajax({
           type: "POST",
-          url: "http://cut.social/scm2016/save",
+          url: "https://cut.social/scm2016/save",
           data: formData,
           dataType: "json",
           contentType: "multipart/form-data;charset=UTF-8"
@@ -202,8 +202,7 @@
           location.reload();
         }).fail(function(xhr, status, error) {
           $('.ui.compact.primary.submit.button').hide();
-          alert(status + ": " + error);
-          alert("خطا در ارسال نتایج.");
+          alert("خطایی در ارتباط با سرور رخ داده است. لطفاً صفحه را رِفرِش کنید یا در آینده نزدیک دوباره مراجعه کنید.");
         });
         evt.preventDefault();
         $('.ui.compact.primary.submit.button').hide();
