@@ -73,7 +73,7 @@
         <div class="ui small info message">
         نمرهٔ ۱ کمترین، و نمرهٔ ۶ بالاترین نمره است.
         </div>
-        <label>آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟</label>
+        <label id="question-label">سوال</label>
         <div class="ui hidden divider"></div>
         <div class="ui centered inline fields">
           <div class="ui field" id="q4">
@@ -153,16 +153,27 @@
     $('#qform').form();
     </script>
     <script>
+      var questions = [
+        "آیا این تصویر نشان‌دهندهٔ کودکی بیمار یا ناتوان است؟",
+        "آیا این تصویر نشان‌دهندهٔ کودکی از طبقه متوسط جامعه (معمولی) است؟",
+        "آیا این تصویر نشان‌دهندهٔ کودکی فقیر یا بی‌خانمان است؟",
+        "آیا این تصویر نشان‌دهندهٔ کودکی مرفه و پول‌دار است؟"
+      ];
+
+      function getRandomGroup (total) {
+        var randomGroup = Math.floor((Math.random() * total) + 1);
+        return randomGroup;
+      }
       // groupCount is the number of images in each group (8 groups)
-      function getRandomImageRelativePath (groupCount) {
+      function getRandomImageRelativePath (group, numOfImages) {
         var genders = ["boys", "girls"];
         var gendersShort = ["b", "g"];
         var groups = ["disabled","ordinary","poor","wealthy"];
         var groupsShort = ["dis","ord","p","weal"];
 
-        var groupRandom = Math.floor((Math.random() * 4));
+        var groupRandom = group;//Math.floor((Math.random() * 4));
         var genderRandom = Math.floor((Math.random() * 2));
-        var childRandom =  Math.floor((Math.random() * groupCount) + 1);
+        var childRandom =  Math.floor((Math.random() * numOfImages) + 1);
         return "data/images/children/" + groups[groupRandom] + "/" + genders[genderRandom] + "/" + childRandom + "_" + groupsShort[groupRandom] + "_" + gendersShort[genderRandom] + '.jpg';
       };
       $(document).ready(function(){
@@ -183,8 +194,12 @@
             $("input[name='assignmentId']").attr("value",""+uuid);
           }
         });
+        var group = getRandomGroup(4);
+        var imagePath = getRandomImageRelativePath(group, 30);
 
-        var imagePath = getRandomImageRelativePath(30);
+        // Update question
+        $("#question-label").html(questions[group]);
+        // Update Image
         $("#qimage").attr('src', imagePath);
       });
       $("#save-btn").click(function(evt){
