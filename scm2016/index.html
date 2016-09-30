@@ -204,6 +204,7 @@
         $("#qimage").attr('src', imagePath);
         $("#survey-image").val(imagePath);
         $("input[name='image']").val(""+imagePath);
+        $("input[name='image']").attr("value",""+imagePath);
       });
       $("#save-btn").click(function(evt){
         var formData = JSON.stringify($("#qform").serializeArray());
