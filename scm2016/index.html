@@ -161,17 +161,17 @@
       ];
 
       function getRandomGroup (total) {
-        var randomGroup = Math.floor((Math.random() * total) + 1);
+        var randomGroup = Math.floor(Math.random() * total) + 1;
         return randomGroup;
       }
       // groupCount is the number of images in each group (8 groups)
-      function getRandomImageRelativePath (group, numOfImages) {
+      function getRandomImageRelativePath (numOfGroups, numOfImages) {
         var genders = ["boys", "girls"];
         var gendersShort = ["b", "g"];
         var groups = ["disabled","ordinary","poor","wealthy"];
         var groupsShort = ["dis","ord","p","weal"];
 
-        var groupRandom = group-1;//Math.floor((Math.random() * 4));
+        var groupRandom = numOfGroups-1;//Math.floor((Math.random() * 4));
         var genderRandom = Math.floor((Math.random() * 2));
         var childRandom =  Math.floor((Math.random() * numOfImages) + 1);
         return "data/images/children/" + groups[groupRandom] + "/" + genders[genderRandom] + "/" + childRandom + "_" + groupsShort[groupRandom] + "_" + gendersShort[genderRandom] + '.jpg';
@@ -198,7 +198,7 @@
         var imagePath = getRandomImageRelativePath(group, 30);
 
         // Update question
-        $("#question-label").html(questions[group]);
+        $("#question-label").html(questions[group-1]);
         // Update Image
         $("#qimage").attr('src', imagePath);
       });
