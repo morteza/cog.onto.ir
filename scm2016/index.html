@@ -66,6 +66,7 @@
 
     <div class="ui top aligned center aligned two column stackable grid" id="content">
       <div class="column">
+        <input type="hidden" name="image" value="-" />
         <img class="ui centered large survey bordered image" src="" id="qimage">
       </div>
       <div class="top column">
@@ -201,6 +202,8 @@
         $("#question-label").html(questions[group-1]);
         // Update Image
         $("#qimage").attr('src', imagePath);
+        $("#survey-image").val(imagePath);
+        $("input[name='image']").val(""+imagePath);
       });
       $("#save-btn").click(function(evt){
         var formData = JSON.stringify($("#qform").serializeArray());
