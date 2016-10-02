@@ -177,24 +177,29 @@
         var childRandom =  Math.floor((Math.random() * numOfImages) + 1);
         return "data/images/children/" + groups[groupRandom] + "/" + genders[genderRandom] + "/" + childRandom + "_" + groupsShort[groupRandom] + "_" + gendersShort[genderRandom] + '.jpg';
       };
+
       $(document).ready(function(){
-        $.ajax({
-          url: "https://cut.social/scm2016/uuid",
-          success: function(data){
-            var uuid = Cookies.get('scm2016_uuid');
-            if(typeof uuid === "undefined"){
+        var uuid = Cookies.get('scm2016_uuid');
+        if (typeof uuid === "undefined") {
+          $.ajax({
+            type: "GET",
+            url: "https://cut.social/scm2016/uuid",
+            success: function(data){
               Cookies.set('scm2016_uuid', data);
               uuid = Cookies.get('scm2016_uuid');
+              $("input[name='assignmentId']").val(""+uuid);
+              $("input[name='assignmentId']").attr("value",""+uuid);
               $('.ui.small.consent.modal').modal({
                 closable:false
               }).modal('show');
-            } else {
-              $("#common-questions").remove();
             }
-            $("input[name='assignmentId']").val(""+uuid);
-            $("input[name='assignmentId']").attr("value",""+uuid);
-          }
-        });
+          });
+        } else {
+          $("#common-questions").remove();
+          $("input[name='assignmentId']").val(""+uuid);
+          $("input[name='assignmentId']").attr("value",""+uuid);
+        }
+
         var group = getRandomGroup(4);
         var imagePath = getRandomImageRelativePath(group, 30);
 
@@ -208,7 +213,7 @@
       });
       $("#save-btn").click(function(evt){
         var formData = JSON.stringify($("#qform").serializeArray());
-        //alert("نتیجه زیر ثبت شد. با تشکر.\n" + formData);
+
         $.ajax({
           type: "POST",
           url: "https://cut.social/scm2016/save",
