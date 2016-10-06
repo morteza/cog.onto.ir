@@ -4,6 +4,7 @@ title_fa:
 layout: post_en
 date: '2016-05-28'
 date_fa:
+comments: true
 categories: article
 link: http://dx.doi.org/10.1177/1745691610393980
 doi: 10.1177/1745691610393980

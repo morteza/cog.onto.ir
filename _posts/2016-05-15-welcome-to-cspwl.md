@@ -4,6 +4,7 @@ title_fa: مقاله‌های دوست‌داشتیِ علوم‌شناختی - 
 layout: post_fa
 date: '2016-05-15 13:01:41 +0430'
 date_fa: ۲۰ اردیبهشت ۱۳۹۵
+comments: true
 categories: blog
 tags: شروع سلام‌دنیا
 ---

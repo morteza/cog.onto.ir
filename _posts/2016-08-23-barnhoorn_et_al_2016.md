@@ -1,10 +1,11 @@
 ---
 title: 'Similar Representations of Sequence Knowledge in Young and Older Adults: A
   Study of Effector Independent Transfer'
-title_fa: 
+title_fa:
 layout: post_en
 date: '2016-08-23'
-date_fa: 
+date_fa:
+comments: true
 categories: article
 link: http://dx.doi.org/10.3389/fpsyg.2016.01125
 doi: 10.3389/fpsyg.2016.01125

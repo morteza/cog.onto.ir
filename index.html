@@ -23,6 +23,7 @@ layout: default
   <h2>No post found</h2>
 {% else %}
 {% for post in site.posts %}
+{% if forloop.index <= 7 %}
   {% if post.layout == 'post_fa' %}
   <div class="list-item">
     <span class="list-post-date"><span class="shamsi date">{{ post.date_fa }}</span></span>
@@ -78,6 +79,24 @@ layout: default
   <br />
   <hr />
   {% endif %}
+{% else %}
+{% if post.layout == 'post_fa' %}
+  <div class="list-item">
+    <span class="list-post-date"><span class="shamsi date">{{ post.date_fa }}</span></span>
+    <h4 class="list-post-title">
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title_fa }}</a>
+    </h4>
+  </div>
+{% endif %}
+{% if post.layout == 'post_en' %}
+  <div class="list-item" style="direction:ltr">
+    <span class="list-post-date"><span>{{ post.date | date: '%B %d, %Y' }}</span></span>
+    <h4 class="list-post-title">
+      <a class="header" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h4>
+  </div>
+{% endif %}
+{% endif %}
 {% endfor %}
 {% endif %}
 </div>

@@ -4,6 +4,7 @@ title_fa:
 layout: post_en
 date: '2016-08-25'
 date_fa:
+comments: true
 categories: article
 link: http://dx.doi.org/10.1016/j.cognition.2011.04.006
 doi: 10.1016/j.cognition.2011.04.006
