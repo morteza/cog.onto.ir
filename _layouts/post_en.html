@@ -12,5 +12,15 @@ comments: true
   <div class="post-date">
     <time>{{ page.date | date: '%B %d, %Y' }}</time>
   </div>
+  
+  <div class="english tags">
+    {% for tag in page.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% if page.tags.size > 0 %}
+  <div class="" style="height: 50px;"></div>
+  {% endif %}
+
   {{ content }}
 </div>

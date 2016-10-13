@@ -13,5 +13,15 @@ comments: true
     <!-- <time>{{ page.date | date_to_string }}</time> -->
     <div class="shamsi date">{{ page.date_fa }}</div>
   </div>
+
+  <div class="farsi tags">
+    {% for tag in page.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% if page.tags.size > 0 %}
+  <div class="" style="height: 50px;"></div>
+  {% endif %}
+
   {{ content }}
 </div>
