@@ -16,7 +16,9 @@ tags:
 - Computer Science
 ---
 <blockquote style="direction:ltr">
+
 <em>Jonas, E., & Kording, K. P. (2017). Could a neuroscientist understand a microprocessor?. PLOS Computational Biology, 13(1).<em> [<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005268">Link</a>]
+
 </blockquote>
 
 
