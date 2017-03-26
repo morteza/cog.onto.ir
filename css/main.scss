@@ -95,6 +95,10 @@ a.farsi.continue:hover, a.english.continue:hover {
   text-align: center;
 }
 
+blockquote {
+  direction: ltr;
+}
+
 .copyleft {
   font: 18px Arial, sans-serif;
   display:inline-block;
