@@ -13,3 +13,10 @@ Cognitive Hypnosis
 هیپنوتیزمِ شناختی
 </div>
 </section>
+
+<br /><br />
+<section style="text-align:center">
+<a href="/downloads/hypnosis_1.2.1.apk" style="direction:rtl">
+دریافت نسخهٔ ۱.۲.۲ برای آندروید
+</a>
+</section>
