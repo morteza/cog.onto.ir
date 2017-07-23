@@ -5,14 +5,17 @@ permalink: /hypnosis
 ---
 
 <section style="text-align:center">
-<img src="/img/hypnosis_logo.png" style="display:block; margin:auto;padding:20px;width:180px;height:auto" />
-<div style="direction:ltr">
-Cognitive Hypnosis
-</div>
+  <div style="text-align:center;display:block">
+    <img src="/img/hypnosis_logo.png" style="display:inline-block;margin:5px;width:140px;height:auto" />
+    <img src="/img/ut_logo.png" style="display:inline-block;margin:5px;width:140px;height:auto" />
+  </div>
+  <h3 style="direction:rtl">
+  هیپنوتیزمِ شناختی
+  </h3>
+  <h3 style="direction:ltr">
+  Cognitive Hypnosis
+  </h3>
 
-<div style="direction:rtl">
-هیپنوتیزمِ شناختی
-</div>
 </section>
 
 <br /><br />
