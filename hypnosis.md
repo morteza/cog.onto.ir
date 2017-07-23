@@ -16,7 +16,7 @@ Cognitive Hypnosis
 
 <br /><br />
 <section style="text-align:center">
-<a href="/downloads/hypnosis_1.2.1.apk" style="direction:rtl">
+<a href="/downloads/hypnosis_1.2.2.apk" style="direction:rtl">
 دریافت نسخهٔ ۱.۲.۲ برای آندروید
 </a>
 </section>
