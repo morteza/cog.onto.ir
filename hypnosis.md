@@ -5,6 +5,7 @@ permalink: /hypnosis
 ---
 
 <section style="text-align:center">
+<img src="/img/hypnosis_logo.png" style="display:block; margin:auto;padding:20px;width:180px;height:auto" />
 <div style="direction:ltr">
 Cognitive Hypnosis
 </div>
