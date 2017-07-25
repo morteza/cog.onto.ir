@@ -30,7 +30,7 @@ permalink: /hypnosis
 از لینک زیر می‌توانید برای دریافت این اپلیکیشن استفاده نمایید. اگر از نسخهٔ آزمایشی استفاده می‌کردید، قبل از به‌روزرسانی، برنامهٔ قبلی را پاک کنید.
 <br />
 <section style="text-align:center">
-<a href="/downloads/hypnosis_v6.apk" style="direction:rtl">
-دریافت نسخهٔ ۶ برای آندروید
+<a href="/downloads/hypnosis_v7.apk" style="direction:rtl">
+دریافت نسخهٔ ۷ برای آندروید
 </a>
 </section>
