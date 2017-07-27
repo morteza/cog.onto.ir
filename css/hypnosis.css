@@ -1,6 +1,7 @@
 
 .gallery img {
   display: inline;
+  border-radius: 0px;
 }
 
 .button {

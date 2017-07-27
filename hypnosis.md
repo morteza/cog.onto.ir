@@ -40,20 +40,26 @@ permalink: /hypnosis
 <section class="gallery">
   <div style="text-align:center;display:block" id="links">
     <a href="/img/hypnosis/1.png">
-    <img src="/img/hypnosis/t1.png" style="display:inline">
+      <img src="/img/hypnosis/t1.png">
     </a>
-  <a href="/img/hypnosis/2.png">
-    <img src="/img/hypnosis/t2.png" style="display:inline">
-  </a>
-  <a href="/img/hypnosis/3.png">
-    <img src="/img/hypnosis/t3.png" style="display:inline">
-  </a>
-  <a href="/img/hypnosis/4.png">
-    <img src="/img/hypnosis/t4.png" style="display:inline">
-  </a>
-  <a href="/img/hypnosis/5.png">
-    <img src="/img/hypnosis/t5.png" style="display:inline">
-  </a>
+    <a href="/img/hypnosis/2.png">
+      <img src="/img/hypnosis/t2.png">
+    </a>
+    <a href="/img/hypnosis/3.png">
+      <img src="/img/hypnosis/t3.png">
+    </a>
+    <a href="/img/hypnosis/4.png">
+      <img src="/img/hypnosis/t4.png">
+    </a>
+    <a href="/img/hypnosis/5.png">
+      <img src="/img/hypnosis/t5.png">
+    </a>
+    <a href="/img/hypnosis/6.png">
+      <img src="/img/hypnosis/t6.png">
+    </a>
+    <a href="/img/hypnosis/7.png">
+      <img src="/img/hypnosis/t7.png">
+    </a>
   </div>
 
   <div id="blueimp-gallery" class="blueimp-gallery">
