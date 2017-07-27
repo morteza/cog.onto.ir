@@ -1,0 +1,18 @@
+
+.gallery img {
+  display: inline;
+}
+
+.button {
+  background: rgb(200,60,80);
+  border-radius: 20px;
+  padding: 20px 40px;
+  color: #fff;
+  text-decoration: none;
+  max-width: 80%;
+  margin: 0 15px;
+}
+.button:hover {
+  background: rgb(235,74,109);
+  color: #fff;
+}

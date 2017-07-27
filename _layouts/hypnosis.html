@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Morteza Ansarinia">
+  <meta name="description" content="Cognitive Hypnosis Application.">
+  <meta name="keywords" content="Hypnosis, Application, Android, iOS, Cognitive, Science, Hypnotic">
+  <meta http-equiv="refresh" content="86400">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon" />
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="stylesheet" href="/css/blueimp-gallery.min.css">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/kiko.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/tags.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/slicknav.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/hypnosis.css">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+
+</head>
+<body>
+  <div class="container">
+    {{ content }}
+  </div>
+
+  <div class="ui hidden divider" style="height:45px;"></div>
+  <footer style="direction:ltr; text-align:center; color: grey; font-size: 0.7rem">
+کپی‌رایت &copy; تابستان ۱۳۹۶ &middot; آزمایشگاه شناختی دانشکدهٔ روان‌شناسی دانشگاه تهران <br /> تمام حقوق محفوظ است
+  <div class="ui hidden divider" style="height:25px;"></div>
+  {% include menu.html %}
+  {% include analytics.html %}
+
+  <script src="/js/blueimp-gallery.min.js"></script>
+
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+
+</body>
+</html>

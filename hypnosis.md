@@ -1,5 +1,5 @@
 ---
-layout: empty
+layout: hypnosis
 title: اپلیکیشن هیپنوتیزمِ شناختی
 permalink: /hypnosis
 ---
@@ -29,8 +29,36 @@ permalink: /hypnosis
 
 از لینک زیر می‌توانید برای دریافت این اپلیکیشن استفاده نمایید. اگر از نسخهٔ آزمایشی استفاده می‌کردید، قبل از به‌روزرسانی، برنامهٔ قبلی را پاک کنید.
 <br />
+<br />
 <section style="text-align:center">
-<a href="/downloads/hypnosis_v7.apk" style="direction:rtl">
+<a href="/downloads/hypnosis_v7.apk" class="button" style="direction:rtl">
 دریافت نسخهٔ ۷ برای آندروید
 </a>
+</section>
+
+<br />
+<section class="gallery">
+  <div style="text-align:center;display:block" id="links">
+    <a href="/img/hypnosis/1.png">
+    <img src="/img/hypnosis/t1.png" style="display:inline">
+    </a>
+  <a href="/img/hypnosis/2.png">
+    <img src="/img/hypnosis/t2.png" style="display:inline">
+  </a>
+  <a href="/img/hypnosis/3.png">
+    <img src="/img/hypnosis/t3.png" style="display:inline">
+  </a>
+  <a href="/img/hypnosis/4.png">
+    <img src="/img/hypnosis/t4.png" style="display:inline">
+  </a>
+  <a href="/img/hypnosis/5.png">
+    <img src="/img/hypnosis/t5.png" style="display:inline">
+  </a>
+  </div>
+
+  <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+      <a class="close">×</a>
+      <ol class="indicator"></ol>
+  </div>
 </section>
