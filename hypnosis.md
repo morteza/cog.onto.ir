@@ -31,7 +31,7 @@ permalink: /hypnosis
 <br />
 <br />
 <section style="text-align:center">
-<a href="/downloads/hypnosis_v8.apk" class="button" style="direction:rtl">
+<a href="https://github.com/morteza/cog.onto.ir/releases/download/v8/hypnosis_v8.apk" class="button" style="direction:rtl">
 دریافت نسخهٔ ۸ برای آندروید
 </a>
 </section>
