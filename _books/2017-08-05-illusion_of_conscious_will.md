@@ -8,7 +8,7 @@ date: '2017-08-05'
 date_fa:
 categories: books
 collection: books
-amazon: http://a.co/gQLSE2Y
+amazon: http://a.co/bLx7bmk
 goodreads: https://www.goodreads.com/book/show/315583.The_Illusion_of_Conscious_Will
 pdf:
 isbn: 9780262731621
