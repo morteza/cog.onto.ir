@@ -31,12 +31,13 @@ permalink: /hypnosis
 <br />
 <br />
 <section style="text-align:center">
-<a href="https://github.com/morteza/cog.onto.ir/releases/download/v8/hypnosis_v8.apk" class="button" style="direction:rtl">
-دریافت نسخهٔ ۸ برای آندروید
+<a href="https://github.com/morteza/cog.onto.ir/releases/download/v9/hypnosis_v9.apk" class="button" style="direction:rtl">
+دریافت نسخهٔ ۹ برای آندروید
 </a>
 </section>
 
 <br />
+
 <section class="gallery">
   <div style="text-align:center;display:block" id="links">
     <a href="/img/hypnosis/1.png">
@@ -67,4 +68,17 @@ permalink: /hypnosis
       <a class="close">×</a>
       <ol class="indicator"></ol>
   </div>
+</section>
+
+<br />
+
+<section>
+  <h3>دسترسی‌های مورد نیاز</h3>
+  <br />
+  <p>جهت اجرای مناسب اپلیکیشن دسترسی‌های زیر در نسخهٔ آندروید مورد نیاز است:</p>
+  <ul>
+    <li>برای ذخیره‌سازی و اجرای صوت جلسه‌ها نیاز به دسترسی به حافظهٔ دستگاه است.</li>
+    <li>برای دریافت جلسه‌های به‌روز و صوت‌ها از سرور، محاسبهٔ امتیاز شما براساس امتیاز دیگران و ارسال امتیاز شما دسترسی به شبکه مورد نیاز است.</li>
+    <li>برای شرکت در قرعه‌کشی و محاسبهٔ امتیاز شما، دسترسی به شناسهٔ دستگاه (بدون اطلاع از شمارهٔ تلفن یا اطلاعات شخصی دیگر) مورد نیاز است.</li>
+  </ul>
 </section>
