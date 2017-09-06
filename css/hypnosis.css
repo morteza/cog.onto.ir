@@ -8,12 +8,18 @@
   background: rgb(200,60,80);
   border-radius: 20px;
   padding: 20px 20px;
+  height: 80px;
   color: #fff;
   text-decoration: none;
   max-width: 90%;
   margin: 0 10px;
 }
+
 .button:hover {
   background: rgb(235,74,109);
   color: #fff;
+}
+
+.telegram {
+  text-align: center
 }

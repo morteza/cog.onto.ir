@@ -37,6 +37,13 @@ permalink: /hypnosis
 </section>
 
 <br />
+<section style="text-align:center">
+  <a href="https://t.me/CognitiveHypnosis" style="direction:rtl;text-align:center;display:block">
+  <img src="/img/telegram_logo.png" style="display:inline-block;margin:5px;width:60px;height:auto">
+  </a>
+</section>
+
+<br />
 
 <section class="gallery">
   <div style="text-align:center;display:block" id="links">
